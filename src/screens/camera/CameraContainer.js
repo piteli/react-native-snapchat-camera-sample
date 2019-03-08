@@ -50,6 +50,7 @@ export default class CameraContainer extends React.Component {
     this.inputHiddenEnable = this.inputHiddenEnable.bind(this);
     this.snap = this.snap.bind(this);
     this.enableFrontCamMode = this.enableFrontCamMode.bind(this);
+    this.close = this.close.bind(this);
     this._panResponder = PanResponder.create({
       onMoveShouldSetResponderCapture: () => true,
       onMoveShouldSetPanResponderCapture: () => true,
@@ -213,7 +214,8 @@ export default class CameraContainer extends React.Component {
                             pausePreview={this.pausePreview} snap={this.snap} enableFrontCamMode={this.enableFrontCamMode}
                             setCameraRef={this.setCameraRef} getCameraRef={this.getCameraRef} inputHiddenEnable={this.inputHiddenEnable}
                             setContainer={this.setContainer} setInput={this.setInput} setInputValue={this.setInputValue}
-                            onBlurInput={this.onBlurInput} panStyle={panStyle} rotate={rotate} _panResponder={this._panResponder}/>;
+                            onBlurInput={this.onBlurInput} panStyle={panStyle} rotate={rotate} _panResponder={this._panResponder}
+                            close={this.close}/>;
     }
   }
   }

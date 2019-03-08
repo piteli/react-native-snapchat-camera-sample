@@ -13,6 +13,14 @@ export default class Home extends React.Component {
                 title="Go to Camera View"
                 color="#27009e"
                 accessibilityLabel="Go to Camera View"
+                style={{marginBottom : 10}}
+                />
+
+              <Button
+                onPress={() => this.props.navigation.push('video')}
+                title="Go to Video Recorder View"
+                color="#27009e"
+                accessibilityLabel="Go to Video Recorder View"
                 />
         </View>      
         );

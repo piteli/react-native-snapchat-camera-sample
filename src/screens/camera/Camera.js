@@ -30,7 +30,7 @@ export default class CaptureCamera extends React.Component {
               }}>
                 <TouchableOpacity
                 style={{padding : 30, flex : 0.5,justifyContent : 'flex-start',alignItems : 'flex-start'}}
-                  onPress={() => this.props.camCapture ? this.close() : this.props.navigation.goBack()}>
+                  onPress={() => this.props.camCapture ? this.props.close() : this.props.navigation.goBack()}>
                   {this.props.camCapture ?
                   <Ionicons style={styles.shadowIcon} name="md-close" size={30} color="#d4d4d4" />
                     :
